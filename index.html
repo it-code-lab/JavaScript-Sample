@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function addNumbers() {
+      document.getElementById("err").innerHTML = "";
+      document.getElementById("result").innerHTML = "";
+      var a = document.getElementById("fnum").value;
+      var b = document.getElementById("snum").value;
+
+      var sum = parseInt(a) + parseInt(b);
+
+      if (isNaN(sum)) {
+        document.getElementById("err").innerHTML = "Invalid Input";
+        return;
+      }
+      document.getElementById("result").innerHTML = sum;
+    }
+  </script>
+</head>
+
+<body>
+  <br>
+  <h2>Demo - Add Two Numbers</h2>
+
+  <label for="fnum">First Number:</label><br>
+  <input type="text" id="fnum"><br>
+  <label for="snum">Second Number:</label><br>
+  <input type="text" id="snum"><br><br>
+  <button type="button" onclick="addNumbers()">Add</button>
+  <p id="err"></p>
+  <p id="result"></p>
+
+
+</body>
+
+</html>
